@@ -94,4 +94,12 @@ contract Lottery is Ownable, VRFConsumerBase {
         lottery_state = LOTTERY_STATE.CLOSED;
         randomness = _randomness;
     }
+
+    function getLotteryState() public view returns (uint256) {
+        return uint256(lottery_state);
+    }
+
+    function getRecentWinner() public view returns (address) {
+        return recentWinner;
+    }
 }

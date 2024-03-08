@@ -1,0 +1,29 @@
+/* Header.css */
+.header-page {
+    display: flex;
+    justify-content: space-between; /* Esto asegura que el contenido esté distribuido */
+    align-items: center; /* Alinea verticalmente el contenido */
+    padding: 20px; /* Agrega un poco de espacio alrededor */
+    background-color: #f0f2f5; /* Un color de fondo suave */
+    border-bottom: 1px solid #e0e0e0; /* Una línea sutil en la parte inferior */
+}
+
+.site-page-header {
+    font-size: 24px; /* Tamaño de letra grande y legible */
+    color: #333; /* Color de texto oscuro para contraste */
+}
+
+.connect-wallet {
+    padding: 10px 20px; /* Espacio interno para hacer el botón más grande */
+    font-size: 16px; /* Tamaño de letra legible */
+    color: #ffffff; /* Color de letra blanco */
+    background-color: #007bff; /* Un azul brillante para que el botón destaque */
+    border: none; /* Sin borde para un aspecto moderno */
+    border-radius: 5px; /* Bordes redondeados suaves */
+    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+    transition: background-color 0.3s; /* Suaviza el cambio de color */
+}
+
+.connect-wallet:hover {
+    background-color: #0056b3; /* Oscurece el botón al pasar el mouse para indicar interactividad */
+}

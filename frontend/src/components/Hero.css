@@ -1,0 +1,55 @@
+/* Hero.css */
+.hero-body {
+    display: flex;
+    flex-direction: column; /* Cambiado para apilar verticalmente los paneles */
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    padding: 20px; /* Espacio alrededor del contenido para evitar que toque los bordes */
+}
+
+.box-panel {
+    width: 35%;
+    min-height: 300px;
+    margin-top: 30px;
+    border-radius: 10px; /* Bordes más redondeados */
+    border: 1px solid #7875FF;
+    background-color: #f8f9fa; /* Un fondo claro para contraste */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra sutil para profundidad */
+    padding: 20px; /* Espacio interno */
+    display: flex; /* Habilita flexbox */
+    flex-direction: column; /* Elementos apilados verticalmente */
+    justify-content: space-around; /* Distribuye el espacio entre los elementos */
+}
+
+.box-panel h2 {
+    margin-top: 0; /* Elimina el margen superior para alinear mejor el título */
+    text-align: center;
+    color: #333; /* Color oscuro para contraste */
+}
+
+p {
+    font-size: 18px; /* Tamaño de letra legible */
+    margin: 10px 0; /* Agrega margen superior e inferior */
+    color: #555; /* Suaviza el color del texto */
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px; /* Ajusta el margen superior para separar de otros elementos */
+}
+
+.action-buttons button {
+    padding: 10px 15px; /* Espacio interno para hacer el botón más grande */
+    font-size: 16px; /* Tamaño de letra legible */
+    color: #ffffff; /* Color de letra blanco */
+    background-color: #007bff; /* Un azul brillante para que el botón destaque */
+    border: none; /* Sin borde para un aspecto moderno */
+    border-radius: 5px; /* Bordes redondeados suaves */
+    cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+    transition: background-color 0.3s; /* Suaviza el cambio de color */
+}
+
+.action-buttons button:hover {
+    background-color: #0056b3; /* Oscurece el botón al pasar el mouse para indicar interactividad */
+}

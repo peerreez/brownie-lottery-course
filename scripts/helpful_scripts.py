@@ -1,5 +1,9 @@
 from brownie import network, accounts, config, Contract, MockV3Aggregator, VRFCoordinatorMock, LinkToken, interface
 from web3 import Web3
+import os
+import shutil
+import yaml
+import json
 
 
 DECIMALS = 8
@@ -60,3 +64,17 @@ def fund_with_link(contract_address, account=None, link_token=None, amount=10000
     tx.wait(1)
     print("contract funded!")
     return tx
+
+
+def update_frontend():
+    copy_folders_to_frontend("./build", "./frontend/src/chain-info")
+    with open("./brownie-config.yml", "r") as brownie_config:
+        config_dict = yaml.load(brownie_config, Loader=yaml.FullLoader)
+        with open("./frontend/src/brownie-config.json", "w") as frontend_brownie_config:
+            json.dump(config_dict, frontend_brownie_config)
+
+
+def copy_folders_to_frontend(src, dest):
+    if os.path.exists(dest):
+        shutil.rmtree(dest)
+    shutil.copytree(src,dest)
